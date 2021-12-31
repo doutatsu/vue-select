@@ -83,7 +83,7 @@
       </div>
     </div>
     <transition :name="transition">
-      <scrollbar style='height: 500px'>
+      <scroll-bar style='height: 500px'>
         <ul
           v-if="dropdownOpen"
           :id="`vs${uid}__listbox`"
@@ -131,7 +131,7 @@
           role="listbox"
           style="display: none; visibility: hidden"
         ></ul>
-      </scrollbar>
+      </scroll-bar>
     </transition>
     <slot name="footer" v-bind="scope.footer" />
   </div>
@@ -145,13 +145,12 @@ import childComponents from './childComponents'
 import appendToBody from '../directives/appendToBody'
 import sortAndStringify from '../utility/sortAndStringify'
 import uniqueId from '../utility/uniqueId'
-import scrollbar from './Scrollbar'
 
 /**
  * @name VueSelect
  */
 export default {
-  components: { ...childComponents, scrollbar },
+  components: { ...childComponents },
 
   directives: { appendToBody },
 

@@ -83,8 +83,8 @@
       </div>
     </div>
     <transition :name="transition">
-      <div class='vs__scrollbar-wrapper'>
-        <scroll-bar class='vs__scrollbar' v-if='dropdownOpen'>
+      <div class='vs__scrollbar-wrapper' v-show='dropdownOpen'>
+        <scroll-bar class='vs__scrollbar'>
           <ul
             v-if="dropdownOpen"
             :id="`vs${uid}__listbox`"

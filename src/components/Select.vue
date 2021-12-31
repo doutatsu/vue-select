@@ -83,7 +83,7 @@
       </div>
     </div>
     <transition :name="transition">
-      <div class='vs__scrollbar-wrapper' v-show='dropdownOpen'>
+      <div class='vs__scrollbar-wrapper' v-if='dropdownOpen'>
         <scroll-bar class='vs__scrollbar'>
           <ul
             v-if="dropdownOpen"

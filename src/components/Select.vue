@@ -86,7 +86,6 @@
       <div class='vs__scrollbar-wrapper' v-if='dropdownOpen'>
         <scroll-bar class='vs__scrollbar'>
           <ul
-            v-if="dropdownOpen"
             :id="`vs${uid}__listbox`"
             ref="dropdownMenu"
             :key="`vs${uid}__listbox`"
@@ -126,12 +125,6 @@
             </li>
             <slot name="list-footer" v-bind="scope.listFooter" />
           </ul>
-          <ul
-            v-else
-            :id="`vs${uid}__listbox`"
-            role="listbox"
-            style="display: none; visibility: hidden"
-          ></ul>
         </scroll-bar>
     </div>
     </transition>
